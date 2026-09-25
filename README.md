@@ -3,7 +3,7 @@
 Project Code: WST21-PM-2026-SF
 Student Name: Comajig, Denver M.
 Course & Year: BSIT-2 SECTION-5
-Database Used: MySQL
+Database Used: SQLite
 
 ## Features
 - Add Task
