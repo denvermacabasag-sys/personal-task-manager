@@ -46,20 +46,17 @@ Database Used: SQLite
 
 4. Configure your database in `.env`:
 
-5. Create the database (e.g. via phpMyAdmin or the MySQL CLI):
-   ```sql
-
-6. Run the migrations to create the `tasks` table (and default Laravel tables):
+5. Run the migrations to create the `tasks` table (and default Laravel tables):
    ```
    php artisan migrate
    ```
 
-7. Serve the application:
+6. Serve the application:
    ```
    php artisan serve
    ```
 
-8. Open the app in your browser:
+7. Open the app in your browser:
    ```
    http://127.0.0.1:8000
    ```
