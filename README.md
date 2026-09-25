@@ -117,4 +117,10 @@ Route (web.php) → Controller (TaskController) → Model (Task) → Database (t
 ```
 
 ## Screenshots
-_(Add screenshots of your running app here once deployed.)_
+<img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/ff09c759-4dd7-4e39-ba3c-6bc68960db53" />
+<img width="1917" height="952" alt="image" src="https://github.com/user-attachments/assets/36b4b2ae-a652-434a-b88e-a19de385c766" />
+<img width="1917" height="952" alt="image" src="https://github.com/user-attachments/assets/4c02c3f4-9bf8-422b-8085-b4146159f898" />
+
+
+
+
