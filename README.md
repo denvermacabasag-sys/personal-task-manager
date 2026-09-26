@@ -29,8 +29,8 @@ Database Used: SQLite
 
 1. Clone this repository:
    ```
-   git clone gh repo clone denvermacabasag-sys/personal-task-manager
-   cd task-manager
+   git clone https://github.com/denvermacabasag-sys/personal-task-manager.git
+   cd task-manage
    ```
 
 2. Install Composer dependencies:
