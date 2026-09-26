@@ -3,7 +3,7 @@
 Project Code: WST21-PM-2026-SF
 Student Name: Comajig, Denver M.
 Course & Year: BSIT-2 SECTION-5
-Database Used: SQLite
+Database Used: MySQL
 
 ## Features
 - Add Task
@@ -20,51 +20,81 @@ Database Used: SQLite
 
 ## Tech Stack
 - Laravel 11 (PHP framework)
+- PHP 8.3
 - Blade templating engine
 - Eloquent ORM
-- SQLite database
+- MySQL 8.4
 - PHPUnit for testing
+- Laragon for PHP and MySQL environment
 
 ## Setup Instructions
+1. Clone this repository
+git clone https://github.com/denvermacabasag-sys/personal-task-manager.git
+cd personal-task-manager
+2. Install Composer dependencies
+composer install
 
-1. Clone this repository:
-   ```
-   git clone https://github.com/denvermacabasag-sys/personal-task-manager.git
-   cd task-manage
-   ```
+If Composer is not added to PATH, use the Composer PHAR with PHP:
 
-2. Install Composer dependencies:
-   ```
-   composer install
-   ```
+& "C:\laragon\bin\php\php-8.3.33-Win32-vs16-x64\php.exe" "C:\laragon\bin\composer.phar" install
+3. Create the environment file
+Copy-Item .env.example .env
 
-3. Copy the environment file and generate an app key:
-   ```
-   cp .env.example .env
-   php artisan key:generate
-   ```
+Generate the Laravel application key:
 
-4. Configure your database in `.env`:
+php artisan key:generate
+4. Configure the MySQL database
 
-5. Run the migrations to create the `tasks` table (and default Laravel tables):
-   ```
-   php artisan migrate
-   ```
+Update the .env file with the following database settings:
 
-6. Serve the application:
-   ```
-   php artisan serve
-   ```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=personal_task_manager
+DB_USERNAME=root
+DB_PASSWORD=
+5. Start MySQL
 
-7. Open the app in your browser:
-   ```
-   http://127.0.0.1:8000
-   ```
+If using Laragon, start the MySQL server.
 
-### Running Tests
-```
+If starting MySQL manually, use:
+
+& "C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin\mysqld.exe" --console
+
+Keep the MySQL window open while using the application.
+
+6. Create the database
+& "C:\laragon\bin\mysql\mysql-8.4.3-winx64\bin\mysql.exe" -u root -e "CREATE DATABASE personal_task_manager;"
+7. Run the migrations
+php artisan migrate
+
+This creates the required Laravel tables and the tasks table.
+
+8. Start the Laravel application
+php artisan serve
+9. Open the application
+
+Open the following address in your browser:
+
+http://127.0.0.1:8000
+
+For the task list:
+
+http://127.0.0.1:8000/tasks
+Running Tests
 php artisan test
-```
+
+## Project Flow
+
+The project demonstrates the Laravel development flow:
+
+Routes → Controller → Model → Database → Blade
+
+Routes — handles application URLs and requests
+Controller — processes task operations
+Model — communicates with the database using Eloquent ORM
+Database — stores task information in MySQL
+Blade — displays the user interface
 
 ## Screenshots
 <img width="1917" height="957" alt="image" src="https://github.com/user-attachments/assets/ff09c759-4dd7-4e39-ba3c-6bc68960db53" />
