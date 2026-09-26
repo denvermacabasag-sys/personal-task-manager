@@ -29,7 +29,7 @@ Database Used: SQLite
 
 1. Clone this repository:
    ```
-   git clone <your-repo-url>
+   git clone gh repo clone denvermacabasag-sys/personal-task-manager
    cd task-manager
    ```
 
